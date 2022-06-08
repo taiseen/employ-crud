@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/employ-crud/static/css/main.9345b6e2.css",
-    "main.js": "/employ-crud/static/js/main.41a5b46a.js",
+    "main.css": "/employ-crud/static/css/main.253cafee.css",
+    "main.js": "/employ-crud/static/js/main.8cc75cff.js",
     "index.html": "/employ-crud/index.html",
-    "main.9345b6e2.css.map": "/employ-crud/static/css/main.9345b6e2.css.map",
-    "main.41a5b46a.js.map": "/employ-crud/static/js/main.41a5b46a.js.map"
+    "main.253cafee.css.map": "/employ-crud/static/css/main.253cafee.css.map",
+    "main.8cc75cff.js.map": "/employ-crud/static/js/main.8cc75cff.js.map"
   },
   "entrypoints": [
-    "static/css/main.9345b6e2.css",
-    "static/js/main.41a5b46a.js"
+    "static/css/main.253cafee.css",
+    "static/js/main.8cc75cff.js"
   ]
 }
