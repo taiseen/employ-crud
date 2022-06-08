@@ -67,7 +67,7 @@ const Add = ({ setIsAdding, setEmployees }) => {
 
       <form onSubmit={handleSubmit}>
         <h1>Add Employ</h1>
-        
+
         {
           personInputField.map(field => (
             <div key={field.id}>
@@ -88,12 +88,16 @@ const Add = ({ setIsAdding, setEmployees }) => {
           ))
         }
 
-        <input type='submit' value='Add Employ' />
-        <input type='button' value='Cancel'
-          className="muted-button"
-          style={{ marginLeft: '12px' }}
-          onClick={() => setIsAdding(false)}
-        />
+        <div style={{ marginTop: '25px' }}>
+
+          <input type='submit' value='Add Employ' />
+          <input type='button' value='Cancel'
+            className="muted-button"
+            style={{ marginLeft: '12px' }}
+            onClick={() => setIsAdding(false)}
+          />
+
+        </div>
       </form>
 
     </section>

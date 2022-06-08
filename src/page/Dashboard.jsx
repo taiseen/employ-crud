@@ -10,6 +10,7 @@ const Dashboard = () => {
     const [isAdding, setIsAdding] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [selectedEmploy, setSelectedEmploy] = useState({});
+    const [employSearch, setEmploySearch] = useState('');
 
 
     // Local Function For Event Listener | Event Trigger
@@ -51,6 +52,7 @@ const Dashboard = () => {
     }
 
 
+    
     return (
         <div className='container'>
             {
@@ -60,9 +62,11 @@ const Dashboard = () => {
                     <>
                         <Header
                             setIsAdding={setIsAdding} // for open <Add /> <Component />
+                            setEmploySearch={setEmploySearch}
                         />
 
                         <List
+                            employSearch={employSearch}
                             employees={employees} // for displaying all employees info
                             employEdit={employEdit} // get employ id for edit | Bind Local Function
                             employDelete={employDelete} // get employ id for delete | Bind Local Function
@@ -87,6 +91,7 @@ const Dashboard = () => {
                     setIsEditing={setIsEditing} // for close this <Component />
                     setEmployees={setEmployees} // for update total employees database
                     selectedEmploy={selectedEmploy} // for update this specific user object...
+                    setEmploySearch={setEmploySearch} // for clearing search value...
                 />
             }
         </div>

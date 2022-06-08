@@ -1,6 +1,7 @@
+import { personInputField } from "../data/data";
 
 
-const List = ({ employees, employEdit, employDelete }) => {
+const List = ({ employees, employEdit, employDelete, employSearch }) => {
 
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -8,7 +9,7 @@ const List = ({ employees, employEdit, employDelete }) => {
     maximumFractionDigits: null
   });
 
-  
+
   return (
     <section className="contain-table">
       <table className="striped-table">
@@ -28,32 +29,40 @@ const List = ({ employees, employEdit, employDelete }) => {
           {
             employees.length > 0
               ? (
-                employees.map((person, i) => (
-                  <tr key={person?.id}>
-                    <td>{i + 1}</td>
-                    <td>{person?.firstName}</td>
-                    <td>{person?.lastName}</td>
-                    <td>{person?.email}</td>
-                    <td>{formatter.format(person?.salary)}</td>
-                    <td>{person?.date}</td>
-                    <td className="text-right">
-                      <button
-                        className='muted-button'
-                        onClick={() => employEdit(person)}
-                      >
-                        Edit
-                      </button>
-                    </td>
-                    <td className="text-left">
-                      <button
-                        className='muted-button'
-                        onClick={() => employDelete(person?.id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))
+                employees.filter(person => // for searching...
+
+                  personInputField.some(key => // by every properties || column values...
+
+                    person[key.id]?.toLowerCase()?.includes(employSearch) 
+
+                  ))
+
+                  .map((person, i) => (
+                    <tr key={person?.id}>
+                      <td>{i + 1}</td>
+                      <td>{person?.firstName}</td>
+                      <td>{person?.lastName}</td>
+                      <td>{person?.email}</td>
+                      <td>{formatter.format(person?.salary)}</td>
+                      <td>{person?.date}</td>
+                      <td className="text-right">
+                        <button
+                          className='muted-button editBtn'
+                          onClick={() => employEdit(person)}
+                        >
+                          Edit
+                        </button>
+                      </td>
+                      <td className="text-left">
+                        <button
+                          className='muted-button deleteBtn'
+                          onClick={() => employDelete(person?.id)}
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))
               )
               : (
                 <tr>

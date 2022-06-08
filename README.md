@@ -16,6 +16,7 @@
 |--|-------------------------|---------------------------|
 | 1| yarn add `uuid`         | unique id generating      |
 | 2| yarn add `sweetalert2`  | displaying alert message  |
+| 3| yarn add `gh-pages`     | Publish to a gh-pages branch on GitHub |
 
 <br />
 
@@ -25,7 +26,25 @@
 | 1| Project Structure                              | 
 | 2| Full CRUD operation                            | 
 | 3| Conditional JSX rendering                      | 
-| 4| Using `sweetalert2` package for alert message  | 
-| 5| using of `new Intl.NumberFormat` for number formatting | 
+| 4| User `Search` by its property values           | 
+| 5| Using `sweetalert2` package for alert message  | 
+| 6| using of `new Intl.NumberFormat` for number formatting | 
 
 * Conditional UI Rendering for Show/Hide Components, base on true/false condition
+
+<br />
+
+```
+"scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+},
+```
+
+```
+"homepage" : "https://taiseen.github.io/employ-crud",
+```
+
+```
+yarn deploy
+```

@@ -3,7 +3,7 @@ import { useState } from "react";
 import sweetAlert from 'sweetalert2';
 
 
-const Edit = ({ setIsEditing, setEmployees, selectedEmploy }) => {
+const Edit = ({ setIsEditing, setEmployees, selectedEmploy, setEmploySearch }) => {
 
   const [editedEmploy, setEditedEmploy] = useState(selectedEmploy);
 
@@ -40,6 +40,8 @@ const Edit = ({ setIsEditing, setEmployees, selectedEmploy }) => {
 
     setIsEditing(false); // close this JSX || <Component />
 
+    setEmploySearch(''); // clear searching value...
+
     // 🟩 for show success alert message
     sweetAlert.fire({
       icon: 'success',
@@ -74,12 +76,16 @@ const Edit = ({ setIsEditing, setEmployees, selectedEmploy }) => {
           ))
         }
 
-        <input type='submit' value='Edit Employ' />
-        <input type='button' value='Cancel'
-          className="muted-button"
-          style={{ marginLeft: '12px' }}
-          onClick={() => setIsEditing(false)}
-        />
+        <div style={{ marginTop: '25px' }}>
+
+          <input type='submit' value='Edit Employ' />
+          <input type='button' value='Cancel'
+            className="muted-button"
+            style={{ marginLeft: '12px' }}
+            onClick={() => setIsEditing(false)}
+          />
+
+        </div>
       </form>
 
     </section>

@@ -1137,6 +1137,50 @@ caption {
   }
 }
 
+
+/* 🟨🟨🟨🟨🟨🟨🟨🟨 */
+/* Our Custom Class Add */
+/* 🟨🟨🟨🟨🟨🟨🟨🟨 */
+.parent {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.searchInput {
+  width           : 250px;
+  /* border-radius: 25px; */
+  padding         : 14px 15px;
+}
+
+.customBtn {
+  /* border-color: blue; */
+}
+
+.customBtn:hover {
+  border-color   : blue;
+  /* border-color: green; */
+}
+
+.editBtn:hover {
+  border-color: blue;
+}
+
+.deleteBtn:hover {
+  border-color: red;
+}
+
+@media (max-width: 480px) {
+  .searchInput {
+    width: 180px;
+  }
+}
+
+/* 🟨🟨🟨🟨🟨🟨🟨🟨 */
+/* Our Custom Class Add */
+/* 🟨🟨🟨🟨🟨🟨🟨🟨 */
+
+
 /*
  * Navigation
  */
