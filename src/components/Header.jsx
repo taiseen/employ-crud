@@ -1,14 +1,18 @@
-
 const Header = ({ setIsAdding }) => {
 
   return (
-    <div>
-      <h1>Employee Management System</h1>
+    <header>
+      <h1>Employ Management System</h1>
 
-      <button onClick={() => setIsAdding(true)}>Add Employee</button>
+      <button
+        className="round-button"
+        onClick={() => setIsAdding(true)}
+      >
+        Add Employ
+      </button>
 
-    </div>
+    </header>
   )
 }
 
-export default Header
+export default Header;
