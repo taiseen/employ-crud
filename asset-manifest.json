@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/employ-crud/static/css/main.253cafee.css",
-    "main.js": "/employ-crud/static/js/main.8cc75cff.js",
+    "main.js": "/employ-crud/static/js/main.79c92bc5.js",
     "index.html": "/employ-crud/index.html",
     "main.253cafee.css.map": "/employ-crud/static/css/main.253cafee.css.map",
-    "main.8cc75cff.js.map": "/employ-crud/static/js/main.8cc75cff.js.map"
+    "main.79c92bc5.js.map": "/employ-crud/static/js/main.79c92bc5.js.map"
   },
   "entrypoints": [
     "static/css/main.253cafee.css",
-    "static/js/main.8cc75cff.js"
+    "static/js/main.79c92bc5.js"
   ]
 }
