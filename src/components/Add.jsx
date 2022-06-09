@@ -19,7 +19,7 @@ const Add = ({ setIsAdding, setEmployees }) => {
 
   // collect all input data from input field's...
   const handleChange = e =>
-    setPersonInfo(pre => ({ ...pre, [e.target.id]: e.target.value.trim() }));
+    setPersonInfo(pre => ({ ...pre, [e.target.id]: e.target.value.replace(/\s\s+/g, ' ') }));
 
 
   // only handle 'Add Employ' submit functionality
@@ -27,10 +27,10 @@ const Add = ({ setIsAdding, setEmployees }) => {
     e.preventDefault(); // prevent browser default GET behavior 
 
     // null || empty input value checking...
-    if (!personInfo.firstName
-      || !personInfo.lastName
-      || !personInfo.email
-      || !personInfo.salary
+    if (!personInfo.firstName.trim()
+      || !personInfo.lastName.trim()
+      || !personInfo.email.trim()
+      || !personInfo.salary.trim()
       || !personInfo.date
     ) {
       return sweetAlert.fire({ // 🟥 for show error alert message
@@ -44,7 +44,7 @@ const Add = ({ setIsAdding, setEmployees }) => {
     // adding new employ in employees database
     setEmployees(pre => ([...pre, { ...personInfo, id: uuidv4() }]));
 
-    // hide this JSX form UI
+    // hide this JSX || <Component /> form UI
     setIsAdding(false);
 
     // 🟩 for show success alert message

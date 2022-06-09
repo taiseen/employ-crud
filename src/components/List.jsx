@@ -56,7 +56,7 @@ const List = ({ employees, employEdit, employDelete, employSearch }) => {
                       <td className="text-left">
                         <button
                           className='muted-button deleteBtn'
-                          onClick={() => employDelete(person?.id)}
+                          onClick={() => employDelete(person)}
                         >
                           Delete
                         </button>

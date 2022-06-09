@@ -17,10 +17,10 @@ const Edit = ({ setIsEditing, setEmployees, selectedEmploy, setEmploySearch }) =
     e.preventDefault(); // prevent browser default GET behavior 
 
     // null || empty input value checking... 
-    if (!editedEmploy.firstName
-      || !editedEmploy.lastName
-      || !editedEmploy.email
-      || !editedEmploy.salary
+    if (!editedEmploy.firstName.trim()
+      || !editedEmploy.lastName.trim()
+      || !editedEmploy.email.trim()
+      || !editedEmploy.salary.trim()
       || !editedEmploy.date
     ) {
       return sweetAlert.fire({ // 🟥 for show error alert message
@@ -31,7 +31,7 @@ const Edit = ({ setIsEditing, setEmployees, selectedEmploy, setEmploySearch }) =
       });
     }
 
-    // employ info edit/update 
+    // 🟩 employ info edit/update 
     setEmployees(prev => prev.map(person =>
       person.id === editedEmploy.id
         ? { ...editedEmploy }

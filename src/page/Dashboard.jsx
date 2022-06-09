@@ -21,7 +21,7 @@ const Dashboard = () => {
 
 
     // employ delete functionality
-    const employDelete = async (id) => {
+    const employDelete = async (employObj) => {
 
         // get confirmation from user for delete or not?
         const { value } = await sweetAlert.fire({
@@ -35,19 +35,16 @@ const Dashboard = () => {
 
         if (value) {
 
-            // Just find that specific employ from employees database
-            const employ = employees.find(person => person.id === id);
-
             sweetAlert.fire({
                 icon: 'success',
                 title: 'Deleted!',
-                text: `${employ.firstName} ${employ.lastName}'s data has been deleted.`,
+                text: `${employObj.firstName} ${employObj.lastName}'s data has been deleted.`,
                 showConfirmButton: false,
                 timer: 2000,
             });
 
             // Finally delete/remove that specific employ from employees database
-            setEmployees(employees.filter(person => person.id !== id));
+            setEmployees(employees.filter(person => person.id !== employObj.id));
         }
     }
 
