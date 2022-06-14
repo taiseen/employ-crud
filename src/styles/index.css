@@ -1170,6 +1170,12 @@ caption {
   border-color: red;
 }
 
+.noUserFound {
+  text-align : center;
+  font-weight: bolder;
+  color      : tomato;
+}
+
 @media (max-width: 480px) {
   .searchInput {
     width: 180px;

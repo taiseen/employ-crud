@@ -33,7 +33,7 @@ const List = ({ employees, employEdit, employDelete, employSearch }) => {
 
                   personInputField.some(key => // by every properties || column values...
 
-                    person[key.id]?.toLowerCase()?.includes(employSearch) 
+                    person[key.id]?.toLowerCase()?.includes(employSearch)
 
                   ))
 
@@ -66,7 +66,7 @@ const List = ({ employees, employEdit, employDelete, employSearch }) => {
               )
               : (
                 <tr>
-                  <td colSpan={7}>No Employ</td>
+                  <td colSpan={7} className='noUserFound'>No Employ Exist... Please Add New Employ...</td>
                 </tr>
               )
           }
@@ -77,3 +77,5 @@ const List = ({ employees, employEdit, employDelete, employSearch }) => {
 }
 
 export default List
+
+{/* <td td colSpan={7} className='noUserFound'>🔎 No Search Result Found...</td> */ }

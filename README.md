@@ -4,12 +4,17 @@
 
 ## Employ - CURD Operation
 
-# React + CSS
+
+# React + CSS | [Live Link][link]
+[link]: https://taiseen.github.io/employ-crud
+
 
 ## UI Created by [PRIMITIVE Minimalist CSS][css]
 [css]: https://taniarascia.github.io/primitive
 
+
 <br />
+
 
 ## Project dependencies...
 |No| Package Installs        | Use for...                |
@@ -18,7 +23,9 @@
 | 2| yarn add `sweetalert2`  | displaying alert message  |
 | 3| yarn add `gh-pages`     | Publish to a gh-pages branch on GitHub |
 
+
 <br />
+
 
 ## Learning context by developing this app:
 |No| Context learn by building this project...      | 
@@ -30,9 +37,12 @@
 | 5| Using `sweetalert2` package for alert message  | 
 | 6| using of `new Intl.NumberFormat` for number formatting | 
 
+
 * Conditional UI Rendering for Show/Hide Components, base on true/false condition
 
+
 <br />
+
 
 ```
 "scripts": {
@@ -41,9 +51,11 @@
 },
 ```
 
+
 ```
 "homepage" : "https://taiseen.github.io/employ-crud",
 ```
+
 
 ```
 yarn deploy
